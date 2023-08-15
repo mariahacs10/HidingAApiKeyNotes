@@ -1,0 +1,32 @@
+Video link that helped me:
+https://www.youtube.com/watch?v=-2ckvIzs0nU
+
+Step 1. In the build.gradle (module file) go under the defaultConfig
+and set up the properties
+
+Heres the Example:
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file("local.properties").newDataInputStream())
+
+buildConfigField "String", "API_KEY", "\"${properties.getProperty("API_KEY")}\""
+
+
+
+Step 2.Go under the local.properties file and define your apikey, MAKE SURE
+to NOT have quotes around the apikey or else your api will crash
+
+Heres the Example:
+
+API_KEY=xk3JsY2KWFfdgP7byQk73ppD
+
+
+
+Step 3.If you have just a basic app define the apikey and put it in that method
+or whatever your creating.
+
+Heres the Example:
+
+val apiKey = BuildConfig.API_KEY
+api.getCurrentWeather(blah, blah, apiKey)
+          
