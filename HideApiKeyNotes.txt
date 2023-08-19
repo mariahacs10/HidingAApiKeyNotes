@@ -1,6 +1,8 @@
 Video link that helped me:
 https://www.youtube.com/watch?v=-2ckvIzs0nU
 
+(Please make sure you have the right Build config and its not the picasso version)
+
 Step 1. In the build.gradle (module file) go under the defaultConfig
 and set up the properties
 
